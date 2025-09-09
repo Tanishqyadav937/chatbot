@@ -1,0 +1,58 @@
+[
+  {
+    "intent": "get_metric_by_company_year",
+    "patterns": [
+      "what was {company} {metric} in {year}",
+      "give me {company}'s {metric} for {year}",
+      "{company} {metric} {year}"
+    ],
+    "fields": ["company", "metric", "year"],
+    "response": "{company} {metric} in {year} was {value} (USD mn)."
+  },
+  {
+    "intent": "get_yoy_growth",
+    "patterns": [
+      "what is {company} {metric} growth from {year_from} to {year_to}",
+      "yoy {metric} for {company} between {year_from} and {year_to}",
+      "{company} {metric} growth {year_from} {year_to}"
+    ],
+    "fields": ["company","metric","year_from","year_to"],
+    "response": "{company}'s {metric} growth from {year_from} to {year_to} was {pct_change:.2f}%."
+  },
+  {
+    "intent": "get_profit_margin",
+    "patterns": [
+      "what is {company} profit margin in {year}",
+      "profit margin {company} {year}",
+      "{company} margin {year}"
+    ],
+    "fields": ["company","year"],
+    "response": "{company}'s profit margin in {year} was {value:.2f}%."
+  },
+  {
+    "intent": "get_debt_to_assets",
+    "patterns": [
+      "what is {company} debt to assets in {year}",
+      "leverage {company} {year}",
+      "debt to assets {company} {year}"
+    ],
+    "fields": ["company","year"],
+    "response": "{company}'s debt-to-assets ratio in {year} was {value:.2f}."
+  },
+  {
+    "intent": "compare_revenue",
+    "patterns": [
+      "compare revenue for {year}",
+      "which company had highest revenue in {year}",
+      "revenue ranking {year}"
+    ],
+    "fields": ["year"],
+    "response": "In {year}, revenue ranking (descending) was: {ranking}."
+  },
+  {
+    "intent": "fallback",
+    "patterns": ["*"],
+    "fields": [],
+    "response": "Sorry, I couldn't map that to a predefined query. Try: 'What was Apple revenue in 2024?' or ask for 'profit margin Tesla 2023'."
+  }
+]
