@@ -1,78 +1,114 @@
-# chatbot
-Financial Data Analysis of Apple, Tesla & Microsoft 📊
+Financial Analysis Chatbot 🤖📊
 
-This project performs a financial data analysis of Apple, Tesla, and Microsoft for the last three fiscal years (2022–2024). It extracts key financial metrics and provides insights on trends, profitability, and cash flows.
+A Python-based prototype chatbot designed for financial data analysis. This chatbot can answer predefined financial queries and analyze key metrics of companies like Apple, Tesla, and Microsoft.
+
+Overview 📝
+
+This project is a prototype financial analysis chatbot created for the Forage task submission. It responds to predefined financial queries using a simple pattern matching approach.
+
+It also includes a sample dataset of Apple, Tesla, and Microsoft (2022–2024) for trend analysis.
 
 Features ✨
 
-Compare Total Revenue, Net Income, Total Assets, and Liabilities across years and companies.
+Answer predefined financial queries:
 
-Calculate Profit Margin and analyze Cash Flow trends.
+Revenue and sales questions
 
-Generate graphs and visualizations to better understand financial performance.
+Net income and profit questions
 
-Can be extended to include more companies or metrics.
+Operating expenses questions
 
-Installation 💻
+Total assets questions
 
-Clone the repository:
+General financial performance questions
 
-git clone <repository-url>
-cd <repository-folder>
+Handle basic greetings, help requests, and exit commands.
+
+Simple command-line interface for easy interaction.
+
+Financial dataset analysis: Revenue, Net Income, Total Assets, Liabilities, Profit Margin, and Cash Flow trends.
+
+Can be extended with more advanced AI/NLP features in the future.
+
+Implementation Details ⚙️
+
+Built using Python (no external dependencies required)
+
+Uses regular expressions for pattern matching
+
+Includes static financial data for Apple, Tesla, and Microsoft
+
+Simple CLI-based interface
+
+Optional: Can integrate Pandas/Matplotlib for data visualizations
+
+Sample Financial Data 📊
+Company	Fiscal Year	Total Revenue (USD mn)	Net Income (USD mn)	Total Assets (USD mn)	Total Liabilities (USD mn)	Profit Margin (%)	Cash Flow from Operations (USD mn)
+Apple	2022	394000	99900	352000	302000	25.4	122000
+Apple	2023	383000	96900	354000	310000	25.3	110000
+Apple	2024	385000	100000	360000	315000	26.0	118000
+Tesla	2022	81500	12500	62000	31000	15.3	14500
+Tesla	2023	96300	12550	85000	42000	13.0	13500
+Tesla	2024	123000	15000	118000	53000	12.2	17500
+Microsoft	2022	198000	72700	364000	198000	36.7	89000
+Microsoft	2023	212000	72000	395000	210000	34.0	91500
+Microsoft	2024	236000	80000	420000	225000	33.9	94000
+How to Use 🚀
+
+Ensure Python is installed on your system.
+
+Run the chatbot script:
+
+python financial_chatbot.py
 
 
-Create a virtual environment (optional but recommended):
+Type your financial query when prompted.
 
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+Type 'help' to see available options.
 
+Type 'exit' to quit the program.
 
-Install dependencies:
+Predefined Queries 💬
 
-pip install -r requirements.txt
+The chatbot recognizes variations of these questions:
 
+"What is the total revenue?"
 
-Dependencies include: pandas, matplotlib, seaborn.
+"How has net income changed?"
 
-Usage 🚀
+"What are the operating expenses?"
 
-Open the Jupyter notebook or Python script:
+"Tell me about total assets"
 
-jupyter notebook financial_analysis.ipynb
-# or
-python financial_analysis.py
+"How is the company's financial performance?"
 
+Limitations ⚠️
 
-Analyze the trends and visualize the data.
+Only handles predefined financial queries
 
-Explore metrics like Profit Margin, Revenue Growth, and Cash Flow.
+Uses simple pattern matching, not AI/NLP
 
-Example Insights 📈
+Contains static financial data
 
-Apple's revenue remained stable with a slight increase in net income in 2024.
-
-Tesla showed strong revenue growth but a declining profit margin trend.
-
-Microsoft maintained high profitability with steady growth in assets.
+Cannot handle complex or follow-up questions
 
 Project Structure 🗂️
-financial-analysis/
+financial-chatbot/
 │
-├─ data/                 # CSV or Excel files with financial data
-├─ notebooks/            # Jupyter notebooks
-├─ scripts/              # Python scripts for analysis
-├─ requirements.txt
-└─ README.md
+├─ data/                 # Sample financial dataset (CSV/Excel)
+├─ scripts/              # Python scripts (chatbot & analysis)
+├─ notebooks/            # Optional Jupyter notebooks for visualization
+├─ requirements.txt      # Optional dependencies
+└─ README.md             # Project documentation
 
 How to Contribute 🤝
 
-Fork the repository.
+Fork the repository
 
-Create a new branch: git checkout -b feature/your-feature.
+Create a new branch: git checkout -b feature/your-feature
 
-Make your changes and commit: git commit -m "Add some feature".
+Make your changes and commit: git commit -m "Add some feature"
 
-Push to the branch: git push origin feature/your-feature.
+Push to the branch: git push origin feature/your-feature
 
-Open a Pull Request.
+Open a Pull Request
