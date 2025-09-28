@@ -101,11 +101,6 @@ financial-chatbot/
 ├─ requirements.txt      # Optional dependencies
 └─ README.md             # Project documentation
 
-How to Contribute 🤝
-
-Fork the repository
-
-Create a new branch: git checkout -b feature/your-feature
 
 Make your changes and commit: git commit -m "Add some feature"
 
